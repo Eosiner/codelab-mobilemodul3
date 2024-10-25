@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "327382465185",
+    "project_id": "codelab-modul3-30e5a",
+    "storage_bucket": "codelab-modul3-30e5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327382465185:android:82bdff2ad1d369a169cee0",
+        "android_client_info": {
+          "package_name": "com.example.codelab3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaPSQ_gF5gqnMgOo_F4tj230m6yUgrHRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
