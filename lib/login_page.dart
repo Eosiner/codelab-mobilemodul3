@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'auth_controller.dart';
+import 'register_page.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -12,6 +12,7 @@ class _LoginPageState extends State<LoginPage> {
   final AuthController _authController = Get.put(AuthController());
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
   @override
   void dispose() {
     _emailController.dispose();
@@ -46,16 +47,32 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: _authController.isLoading.value
                     ? null
                     : () {
-                        _authController.loginUser(
-                          _emailController.text,
-                          _passwordController.text,
-                        );
-                      },
+                  _authController.loginUser(
+                    _emailController.text,
+                    _passwordController.text,
+                  );
+                },
                 child: _authController.isLoading.value
                     ? CircularProgressIndicator()
                     : Text('Login'),
               );
             }),
+            SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Belum punya akun? "),
+                TextButton(
+                  onPressed: () {
+                    Get.to(() => RegisterPage());
+                  },
+                  child: Text(
+                    'Register',
+                    style: TextStyle(color: Colors.blue),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
